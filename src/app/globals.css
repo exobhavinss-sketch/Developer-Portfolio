@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #fbf9f9;
+    --foreground: #1b1c1c;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    color-scheme: light;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+  }
+
+  ::selection {
+    background-color: #111111;
+    color: #ffffff;
+  }
+}
+
+@layer utilities {
+  .hairline-border {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #e5e5e5;
+  }
+}

@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=JetBrains+Mono:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "secondary-container": "#316bf3",
+        "on-tertiary-fixed-variant": "#3f465c",
+        "inverse-surface": "#303031",
+        "surface-container": "#efeded",
+        "on-tertiary-fixed": "#131b2e",
+        "secondary-fixed": "#dbe1ff",
+        "secondary": "#0051d5",
+        "primary": "#000000",
+        "on-primary": "#ffffff",
+        "tertiary": "#000000",
+        "tertiary-fixed": "#dae2fd",
+        "surface-container-low": "#f5f3f3",
+        "on-secondary-fixed": "#00174b",
+        "inverse-on-surface": "#f2f0f0",
+        "surface-container-highest": "#e3e2e2",
+        "on-error": "#ffffff",
+        "error-container": "#ffdad6",
+        "surface-container-high": "#e9e8e7",
+        "tertiary-fixed-dim": "#bec6e0",
+        "on-error-container": "#93000a",
+        "background": "#fbf9f9",
+        "on-primary-fixed-variant": "#474646",
+        "surface-tint": "#5f5e5e",
+        "on-secondary-container": "#fefcff",
+        "surface-container-lowest": "#ffffff",
+        "surface-bright": "#fbf9f9",
+        "primary-fixed": "#e5e2e1",
+        "on-secondary-fixed-variant": "#003ea8",
+        "on-primary-fixed": "#1c1b1b",
+        "secondary-fixed-dim": "#b4c5ff",
+        "outline-variant": "#c4c7c7",
+        "primary-container": "#1c1b1b",
+        "on-secondary": "#ffffff",
+        "on-tertiary-container": "#7c839b",
+        "error": "#ba1a1a",
+        "primary-fixed-dim": "#c8c6c5",
+        "on-surface": "#1b1c1c",
+        "outline": "#747878",
+        "surface-variant": "#e3e2e2",
+        "on-primary-container": "#858383",
+        "on-surface-variant": "#444748",
+        "tertiary-container": "#131b2e",
+        "surface": "#fbf9f9",
+        "inverse-primary": "#c8c6c5",
+        "surface-dim": "#dbdad9",
+        "on-tertiary": "#ffffff",
+        "on-background": "#1b1c1c"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.125rem",
+        "lg": "0.25rem",
+        "xl": "0.5rem",
+        "full": "0.75rem"
+      },
+      "spacing": {
+        "margin-mobile": "1.25rem",
+        "space-md": "1rem",
+        "space-xl": "2.5rem",
+        "gutter-mobile": "1rem",
+        "space-sm": "0.5rem",
+        "space-lg": "1.5rem",
+        "gutter": "1.5rem",
+        "space-xs": "0.25rem",
+        "margin": "3rem"
+      },
+      "fontFamily": {
+        "body-lg": ["Geist"],
+        "display-hero-mobile": ["Geist"],
+        "headline-lg-mobile": ["Geist"],
+        "headline-md": ["Geist"],
+        "headline-lg": ["Geist"],
+        "body-sm": ["Geist"],
+        "label-mono": ["JetBrains Mono"],
+        "code-inline": ["JetBrains Mono"],
+        "body-md": ["Geist"],
+        "display-hero": ["Geist"]
+      },
+      "fontSize": {
+        "body-lg": ["17px", {"lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+        "display-hero-mobile": ["38px", {"lineHeight": "44px", "letterSpacing": "-0.03em", "fontWeight": "600"}],
+        "headline-lg-mobile": ["26px", {"lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "500"}],
+        "headline-md": ["22px", {"lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "500"}],
+        "headline-lg": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.03em", "fontWeight": "500"}],
+        "body-sm": ["13px", {"lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400"}],
+        "label-mono": ["11px", {"lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "500"}],
+        "code-inline": ["12px", {"lineHeight": "16px", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+        "body-md": ["14px", {"lineHeight": "22px", "letterSpacing": "-0.005em", "fontWeight": "400"}],
+        "display-hero": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.04em", "fontWeight": "600"}]
+      }
+    }
+  }
+}</script></head><body class="bg-surface font-body-md text-on-surface min-h-screen flex flex-col selection:bg-primary selection:text-on-primary"><header class="fixed top-0 left-0 right-0 w-full z-50 bg-surface/85 backdrop-blur-xl border-b border-surface-container-high transition-colors duration-150"><div class="h-16 max-w-[1360px] mx-auto px-margin-mobile lg:px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md shrink-0"><a class="flex items-center gap-space-sm group" data-path="about" href="#"><img alt="Bhavin Shankur Monogram" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UhD9hMGudbUTY9DciPaunqvMYcrJ_QefnDupEUmHytGDXIQXDNIAUv7-21qM5LYmZCb38EFLP7QsVvg2LTRWT8BIx1e8Sn5Otn3LaXRnI9FjLOURuGQaN6g8HvlKzha95pX9gMxkMkq6WwQUuSrleKXTa6wdt4H1iOdGVgAvx6O-fjwAGY9kYCu-yXunq7ngxFrviH1LxV7_n92IVwVmbEKlTIv4nmDQSph3Jg2HOa5eal06SmYDmUMA"/><span class="font-headline-md text-body-md font-semibold tracking-tight text-on-surface">Bhavin Shankur</span></a><div class="hidden xl:flex items-center gap-2 px-2.5 py-1 rounded-full bg-surface-container-low border border-surface-container-high"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span></span><span class="font-label-mono text-label-mono text-on-surface-variant uppercase tracking-wider">Available for ambitious projects</span></div></div><nav class="hidden md:flex items-center gap-space-lg" data-active-classes="text-on-surface font-medium border-b-2 border-primary"><a aria-current="page" class="transition-colors py-1 text-on-surface font-medium border-b-2 border-primary" data-path="about" href="#">About</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors py-1" data-path="projects" href="#">Projects</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors py-1" data-path="skills" href="#">Skills</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors py-1" data-path="experience" href="#">Experience</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors py-1" data-path="currently-building" href="#">Currently Building</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors py-1" data-path="activity" href="#">Activity</a></nav><div class="flex items-center gap-space-sm shrink-0"><a class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-primary text-on-primary font-body-sm text-body-sm font-medium hover:bg-inverse-surface transition-all duration-150 active:scale-[0.99]" href="#contact"><span>Get in Touch</span><kbd class="hidden sm:inline-block font-label-mono text-[10px] px-1.5 py-0.5 rounded bg-on-primary/20 text-on-primary">⌘K</kbd></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 flex-1 bg-surface"><div class="max-w-[1360px] mx-auto px-margin-mobile lg:px-margin"><div class="flex flex-col w-full">
+<!-- SECTION 1: HERO -->
+<section class="py-space-xl lg:py-space-xl flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-md max-w-4xl">
+<!-- Status Pill -->
+<div class="inline-flex items-center gap-2.5 px-3 py-1 rounded-full bg-surface-container-low w-fit">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
+</span>
+<span class="font-label-mono text-label-mono text-on-surface uppercase tracking-widest font-semibold">
+          SYSTEM: ONLINE / ACCEPTING COLLABORATIONS 2026
+        </span>
+</div>
+<!-- Main Headline -->
+<h1 class="font-display-hero text-headline-lg lg:text-display-hero text-on-surface font-semibold tracking-tight leading-[1.08]">
+        I build intelligent software and digital products.
+      </h1>
+<!-- Supporting Paragraph -->
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+        AI/ML and full-stack developer focused on turning ideas into useful, scalable technology. Engineering agentic systems, real-time distributed telemetry, and high-craft human interfaces.
+      </p>
+<!-- Primary CTA Row -->
+<div class="flex flex-wrap items-center gap-space-sm pt-space-xs">
+<a class="inline-flex items-center gap-2 px-5 py-2.5 rounded bg-primary text-on-primary font-body-md text-body-md font-medium hover:bg-inverse-surface transition-all duration-150 active:scale-[0.995]" href="#projects">
+<span>View Selected Work</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<a class="inline-flex items-center gap-2 px-5 py-2.5 rounded bg-surface-container-lowest text-on-surface font-body-md text-body-md font-medium hover:bg-surface-container transition-all duration-150" href="#contact">
+<span>Get in Touch</span>
+</a>
+<!-- Copy Email Micro-Button -->
+<button class="inline-flex items-center gap-2 px-4 py-2.5 rounded bg-surface-container-low hover:bg-surface-container font-label-mono text-label-mono text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer" id="hero-copy-btn" onclick="copyContactEmail('exobhavinss@gmail.com', this)">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+<span id="hero-copy-label">exobhavinss@gmail.com</span>
+</button>
+</div>
+<!-- Social Links Row -->
+<div class="flex items-center gap-space-md pt-2 text-on-surface-variant font-label-mono text-label-mono">
+<span class="text-outline uppercase">INDEX:</span>
+<a class="hover:text-on-surface transition-colors inline-flex items-center gap-1" href="https://github.com" rel="noreferrer" target="_blank">GITHUB <span class="text-outline">↗</span></a>
+<span>/</span>
+<a class="hover:text-on-surface transition-colors inline-flex items-center gap-1" href="https://linkedin.com" rel="noreferrer" target="_blank">LINKEDIN <span class="text-outline">↗</span></a>
+<span>/</span>
+<a class="hover:text-on-surface transition-colors inline-flex items-center gap-1" href="https://x.com" rel="noreferrer" target="_blank">X.COM <span class="text-outline">↗</span></a>
+<span>/</span>
+<a class="hover:text-on-surface transition-colors inline-flex items-center gap-1" href="#contact">RESUME <span class="text-outline">↓</span></a>
+</div>
+</div>
+<!-- Hero Interactive Technical Visual: Mesh Topology Canvas -->
+<div class="w-full bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm p-space-md lg:p-space-lg flex flex-col gap-space-md relative">
+<div class="flex flex-wrap items-center justify-between gap-space-sm pb-space-sm border-b border-surface-container">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="font-label-mono text-label-mono text-on-surface uppercase font-medium">Agent Orchestration & Realtime Telemetry Mesh</span>
+</div>
+<div class="flex items-center gap-space-md font-label-mono text-label-mono text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="text-outline">LATENCY:</span> 14ms</span>
+<span class="flex items-center gap-1"><span class="text-outline">VECTOR DB:</span> SYNCED</span>
+<span class="flex items-center gap-1"><span class="text-outline">SHARDS:</span> 4/4</span>
+<span class="hidden sm:inline-flex items-center gap-1 text-secondary font-medium">● ACTIVE CLUSTER</span>
+</div>
+</div>
+<!-- Topology Diagram Inline SVG -->
+<div class="w-full overflow-x-auto py-2">
+<svg class="w-full h-auto min-w-[700px] select-none text-on-surface" fill="none" viewbox="0 0 1100 260" xmlns="http://www.w3.org/2000/svg">
+<!-- Background Grid Lines -->
+<line stroke="currentColor" stroke-dasharray="3 3" stroke-opacity="0.05" x1="40" x2="1060" y1="50" y2="50"></line>
+<line stroke="currentColor" stroke-dasharray="3 3" stroke-opacity="0.05" x1="40" x2="1060" y1="130" y2="130"></line>
+<line stroke="currentColor" stroke-dasharray="3 3" stroke-opacity="0.05" x1="40" x2="1060" y1="210" y2="210"></line>
+<!-- Dynamic Connection Paths -->
+<path d="M 120 130 C 220 130, 220 70, 320 70" stroke="currentColor" stroke-opacity="0.25" stroke-width="1.5"></path>
+<path d="M 120 130 C 220 130, 220 130, 320 130" stroke="currentColor" stroke-opacity="0.6" stroke-width="1.5"></path>
+<path d="M 120 130 C 220 130, 220 190, 320 190" stroke="currentColor" stroke-opacity="0.25" stroke-width="1.5"></path>
+<path d="M 440 70 C 520 70, 520 50, 600 50" stroke="currentColor" stroke-opacity="0.25" stroke-width="1.5"></path>
+<path d="M 440 70 C 520 70, 520 90, 600 90" stroke="currentColor" stroke-opacity="0.25" stroke-width="1.5"></path>
+<path d="M 440 130 C 520 130, 520 130, 600 130" stroke="currentColor" stroke-opacity="0.7" stroke-width="1.5"></path>
+<path d="M 440 190 C 520 190, 520 170, 600 170" stroke="currentColor" stroke-opacity="0.25" stroke-width="1.5"></path>
+<path d="M 440 190 C 520 190, 520 210, 600 210" stroke="currentColor" stroke-opacity="0.25" stroke-width="1.5"></path>
+<path d="M 720 130 C 800 130, 820 90, 900 90" stroke="currentColor" stroke-opacity="0.25" stroke-width="1.5"></path>
+<path d="M 720 130 C 800 130, 820 170, 900 170" stroke="currentColor" stroke-opacity="0.5" stroke-width="1.5"></path>
+<!-- Primary Node 0: Ingestion Gateway -->
+<g transform="translate(60, 105)">
+<rect fill="#efeded" height="50" rx="4" stroke="none" width="110"></rect>
+<circle cx="20" cy="25" fill="#000000" r="4"></circle>
+<text fill="#1b1c1c" font-family="JetBrains Mono" font-size="10" font-weight="600" x="32" y="22">INGRESS</text>
+<text fill="#444748" font-family="JetBrains Mono" font-size="9" x="32" y="36">HTTP / gRPC</text>
+</g>
+<!-- Middle Layer Nodes: Planner / Router / State -->
+<g transform="translate(320, 45)">
+<rect fill="#ffffff" filter="drop-shadow(0 1px 2px rgba(0,0,0,0.05))" height="50" rx="4" stroke="none" width="120"></rect>
+<text fill="#1b1c1c" font-family="JetBrains Mono" font-size="10" font-weight="600" x="14" y="22">AGENT_COOR</text>
+<text fill="#747878" font-family="JetBrains Mono" font-size="9" x="14" y="36">ReAct Loop</text>
+<circle cx="106" cy="25" fill="#0051d5" r="3"></circle>
+</g>
+<g transform="translate(320, 105)">
+<rect fill="#1b1c1c" height="50" rx="4" stroke="none" width="120"></rect>
+<text fill="#ffffff" font-family="JetBrains Mono" font-size="10" font-weight="600" x="14" y="22">ORBION_CORE</text>
+<text fill="#bec6e0" font-family="JetBrains Mono" font-size="9" x="14" y="36">State Engine</text>
+<circle cx="106" cy="25" fill="#316bf3" r="3"></circle>
+</g>
+<g transform="translate(320, 165)">
+<rect fill="#ffffff" filter="drop-shadow(0 1px 2px rgba(0,0,0,0.05))" height="50" rx="4" stroke="none" width="120"></rect>
+<text fill="#1b1c1c" font-family="JetBrains Mono" font-size="10" font-weight="600" x="14" y="22">RAG_EMBED</text>
+<text fill="#747878" font-family="JetBrains Mono" font-size="9" x="14" y="36">HNSW Shards</text>
+<circle cx="106" cy="25" fill="#0051d5" r="3"></circle>
+</g>
+<!-- Execution Workers -->
+<g transform="translate(600, 25)">
+<rect fill="#f5f3f3" height="40" rx="4" width="120"></rect>
+<text fill="#1b1c1c" font-family="JetBrains Mono" font-size="10" x="12" y="24">Worker 01: Ingest</text>
+</g>
+<g transform="translate(600, 70)">
+<rect fill="#f5f3f3" height="40" rx="4" width="120"></rect>
+<text fill="#1b1c1c" font-family="JetBrains Mono" font-size="10" x="12" y="24">Worker 02: Synthesize</text>
+</g>
+<g transform="translate(600, 115)">
+<rect fill="#f5f3f3" height="40" rx="4" width="120"></rect>
+<text fill="#0051d5" font-family="JetBrains Mono" font-size="10" font-weight="600" x="12" y="24">Worker 03: Telemetry</text>
+</g>
+<g transform="translate(600, 160)">
+<rect fill="#f5f3f3" height="40" rx="4" width="120"></rect>
+<text fill="#1b1c1c" font-family="JetBrains Mono" font-size="10" x="12" y="24">Worker 04: Vector Search</text>
+</g>
+<g transform="translate(600, 205)">
+<rect fill="#f5f3f3" height="40" rx="4" width="120"></rect>
+<text fill="#1b1c1c" font-family="JetBrains Mono" font-size="10" x="12" y="24">Worker 05: Evaluation</text>
+</g>
+<!-- Sinks / Egress -->
+<g transform="translate(900, 65)">
+<rect fill="#ffffff" filter="drop-shadow(0 1px 2px rgba(0,0,0,0.05))" height="50" rx="4" width="140"></rect>
+<text fill="#1b1c1c" font-family="JetBrains Mono" font-size="10" font-weight="600" x="14" y="22">STREAM_OUTPUT</text>
+<text fill="#747878" font-family="JetBrains Mono" font-size="9" x="14" y="36">SSE / WebSockets</text>
+</g>
+<g transform="translate(900, 145)">
+<rect fill="#ffffff" filter="drop-shadow(0 1px 2px rgba(0,0,0,0.05))" height="50" rx="4" width="140"></rect>
+<text fill="#1b1c1c" font-family="JetBrains Mono" font-size="10" font-weight="600" x="14" y="22">PERSISTENCE</text>
+<text fill="#747878" font-family="JetBrains Mono" font-size="9" x="14" y="36">PostgreSQL + Timescale</text>
+</g>
+</svg>
+</div>
+<!-- Real-time Terminal Log Ticker -->
+<div class="bg-surface-container-low rounded p-3 font-label-mono text-label-mono flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="text-secondary font-bold">›</span>
+<span class="text-on-surface font-medium">[SYS_LOG]</span>
+<span class="truncate max-w-xl" id="terminal-ticker">Orbion runtime loop running at 60Hz. Zero drift recorded across all active shards.</span>
+</div>
+<div class="shrink-0 text-outline">EPOCH_TIME: 1774319842.102</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: INTRODUCTION / ARCHITECTURE & PHILOSOPHY -->
+<section class="py-space-xl border-t border-surface-container-high" id="about">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Left Column: Marker & Bold Thesis -->
+<div class="lg:col-span-5 flex flex-col gap-space-sm">
+<div class="font-label-mono text-label-mono uppercase tracking-widest text-on-surface-variant font-medium">
+          01 / ARCHITECTURE & PHILOSOPHY
+        </div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-medium tracking-tight">
+          I turn complex ideas into resilient software.
+        </h2>
+<div class="w-12 h-0.5 bg-primary mt-2"></div>
+</div>
+<!-- Right Column: Narrative -->
+<div class="lg:col-span-7 flex flex-col gap-space-md font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+<p>
+          I am a software engineer focused on building at the intersection of machine intelligence and human ergonomics. My engineering practice rejects vanity abstractions in favor of deterministic state models, resilient distributed data layers, and surgical frontend execution.
+        </p>
+<p>
+          Whether deploying autonomous multi-agent pipelines that coordinate across contextual embeddings, streaming flight telemetry with sub-second radar rendering, or modeling urban civic infrastructure via edge computer vision, I obsess over the microsecond details that make software durable, fast, and remarkably intuitive to use.
+        </p>
+</div>
+</div>
+<!-- 4 Architectural Pillars Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md mt-space-xl">
+<div class="bg-surface-container-lowest p-space-md rounded-lg flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-secondary text-[24px]">smart_toy</span>
+<span class="font-label-mono text-label-mono text-outline">01</span>
+</div>
+<div class="font-headline-md text-body-md font-semibold text-on-surface pt-2">AI & Agentic Systems</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Autonomous orchestration, RAG architectures, custom LLM tool-calling loops, and contextual memory vector engines.</p>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-lg flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-secondary text-[24px]">hub</span>
+<span class="font-label-mono text-label-mono text-outline">02</span>
+</div>
+<div class="font-headline-md text-body-md font-semibold text-on-surface pt-2">Full-Stack Architecture</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Type-safe TypeScript & Python services, Next.js application frameworks, scalable WebSockets, and low-latency APIs.</p>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-lg flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-secondary text-[24px]">view_in_ar</span>
+<span class="font-label-mono text-label-mono text-outline">03</span>
+</div>
+<div class="font-headline-md text-body-md font-semibold text-on-surface pt-2">Interface Engineering</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">60fps micro-interactions, robust design systems, optimistic UI state updates, and accessible typographic hierarchies.</p>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-lg flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-secondary text-[24px]">speed</span>
+<span class="font-label-mono text-label-mono text-outline">04</span>
+</div>
+<div class="font-headline-md text-body-md font-semibold text-on-surface pt-2">High-Reliability Infra</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Distributed telemetry pipelines, edge deployments, zero-downtime microservices, and observable state telemetry.</p>
+</div>
+</div>
+</section>
+<!-- SECTION 3: FEATURED PROJECTS -->
+<section class="py-space-xl border-t border-surface-container-high flex flex-col gap-space-xl" id="projects">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-space-sm">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-mono text-label-mono uppercase tracking-widest text-on-surface-variant font-medium">02 / SELECTED WORK</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">Architectural Case Studies</h2>
+</div>
+<div class="font-label-mono text-label-mono text-on-surface-variant">
+        SHOWCASING 05 PRODUCTION REPOSITORIES
+      </div>
+</div>
+<!-- Project 1: Flagship Full-Width Hero Case (Orbion) -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm flex flex-col">
+<div class="p-space-md lg:p-space-lg flex flex-col lg:flex-row lg:items-center justify-between gap-space-md border-b border-surface-container">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-3">
+<span class="font-headline-lg text-headline-md lg:text-headline-lg font-semibold text-on-surface">Orbion</span>
+<span class="font-label-mono text-label-mono px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-semibold">FLAGSHIP</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface-variant font-medium">AI Orchestration Workbench & Multi-Agent Runtime</span>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm font-label-mono text-label-mono">
+<a class="px-3.5 py-1.5 rounded bg-primary text-on-primary font-medium hover:bg-inverse-surface transition-colors flex items-center gap-1.5" href="#">
+<span>Live System</span>
+<span class="text-[14px]">↗</span>
+</a>
+<a class="px-3.5 py-1.5 rounded bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors flex items-center gap-1.5" href="#">
+<span>Architecture Spec</span>
+</a>
+<a class="px-3.5 py-1.5 rounded bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors flex items-center gap-1.5" href="https://github.com" rel="noreferrer" target="_blank">
+<span>Source Code</span>
+<span class="text-[14px]">↗</span>
+</a>
+</div>
+</div>
+<!-- Preview Image Display -->
+<div class="w-full bg-surface-container-low overflow-hidden">
+<img alt="Orbion AI Orchestration Workbench Dashboard" class="w-full h-auto object-cover max-h-[580px] hover:scale-[1.01] transition-transform duration-500 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjdUEsVLtgqfuVOOT_QgyTFq-ukzTXr_FF_Vrw0CsP-N47TNldOzL74Asv8WX0AWejCgXlisT6RhFDhVCPIoV_G_9gSPX5j3fxH8OgMoB4Xx8FQvpA1lvkbJXnltqvya_veEc3MenhAbaQA5pytSjWpmgZpEbJuq9S0aCQonjTzEEGVy6t64LV_sokKF-VMXDJlF3ObXvgmebrZYiEHg8-6gW2EG3k0lc5Nzbuz2M-SV6qDCEX18bO"/>
+</div>
+<!-- Metadata & Context Footer -->
+<div class="p-space-md lg:p-space-lg grid grid-cols-1 md:grid-cols-12 gap-space-md bg-surface-container-lowest">
+<div class="md:col-span-8 flex flex-col gap-2">
+<span class="font-label-mono text-label-mono text-outline uppercase">SYSTEM OVERVIEW</span>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Orbion is an orchestration workbench facilitating deterministic execution across dynamic LLM agent clusters. Features live tree-state inspection, sub-15ms WebSocket telemetry pipelines, isolated sandboxed tool loops, and pluggable vector memory stores.
+          </p>
+</div>
+<div class="md:col-span-4 flex flex-col gap-2">
+<span class="font-label-mono text-label-mono text-outline uppercase">TECHNOLOGY STACK</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="font-label-mono text-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Python 3.12</span>
+<span class="font-label-mono text-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Next.js 15</span>
+<span class="font-label-mono text-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">WebSockets</span>
+<span class="font-label-mono text-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Vector Embeddings</span>
+<span class="font-label-mono text-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Redis</span>
+<span class="font-label-mono text-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Tailwind CSS</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Asymmetric 2-Column Grid: Projects 2 & 3 -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg">
+<!-- Project 2: Aircraft Platform -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm flex flex-col justify-between">
+<div class="p-space-md flex flex-col gap-1 border-b border-surface-container">
+<div class="flex items-center justify-between">
+<span class="font-headline-md text-headline-md font-semibold text-on-surface">Aircraft Platform</span>
+<span class="font-label-mono text-label-mono text-outline uppercase">REAL-TIME DATA</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Aerospace Flight Operations & Engine Telemetry Radar</span>
+</div>
+<div class="w-full bg-surface-container-low overflow-hidden">
+<img alt="Aircraft Platform Flight Operations Telemetry" class="w-full h-auto object-cover max-h-[380px] hover:scale-[1.01] transition-transform duration-500 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFFm0yQHpUsuJkl8aG1KxJ0LCVfed1LJgnXte3DRD_nnhNZOCazw51sOKE8k61nu4tlVo3Mscj5JPaDzlxZRyMvUhIuRhC9BYCqM5CCIEaShVYxhStKGC264GRhr4Ve0RFr8QnOxxdFctDfwXQ1cJ8tD7YXIrGEG8MW3XQ2LDyeDvVufOUtbccxsU1fqX91vwB6ak_mcqlMJve1CzHJtKMAB4MprxQNQrPpC426g230lmOld7VLYP9"/>
+</div>
+<div class="p-space-md flex flex-col gap-space-sm bg-surface-container-lowest">
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Low-latency flight tracking and multi-sensor telemetry ingestion handling aircraft coordinate streams with sub-second vector radar visualization, altitude profiling, and engine exhaust gas thermal metrics.
+          </p>
+<div class="flex flex-wrap gap-1 pt-1">
+<span class="font-label-mono text-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">TypeScript</span>
+<span class="font-label-mono text-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Go Engine</span>
+<span class="font-label-mono text-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">WebGL Radar</span>
+<span class="font-label-mono text-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">TimescaleDB</span>
+</div>
+<div class="pt-2 flex items-center justify-between border-t border-surface-container font-label-mono text-label-mono">
+<a class="text-on-surface hover:text-secondary font-medium transition-colors inline-flex items-center gap-1" href="#">
+<span>View Case Study</span>
+<span>↗</span>
+</a>
+<span class="text-outline">LATENCY: <10ms</span>
+</div>
+</div>
+</div>
+<!-- Project 3: Road Sense -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm flex flex-col justify-between">
+<div class="p-space-md flex flex-col gap-1 border-b border-surface-container">
+<div class="flex items-center justify-between">
+<span class="font-headline-md text-headline-md font-semibold text-on-surface">Road Sense</span>
+<span class="font-label-mono text-label-mono text-outline uppercase">CIVIC AI</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Urban Sensor Telemetry & Pavement Condition Vision</span>
+</div>
+<div class="w-full bg-surface-container-low overflow-hidden">
+<img alt="Road Sense Urban Civic Sensor Telemetry" class="w-full h-auto object-cover max-h-[380px] hover:scale-[1.01] transition-transform duration-500 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYVDonFzKSHCJixb2M-GaX5h10N0NneqzGPO4KuYUoPJsObCnXS7KiBhzZ9IBVXz-HO1iTsxOx2opI4VZ8VYZNH4eRcz7AQ3VEhOLpkrWmsYgDU4zG0AcHc6cBsFrKvVWFp_SgVFruJSob9B3NLc7RbmMTZx2lcTreXUnV0zr5OS7qGqxTYF4yo8dAiLJ0Y79v6Ct4Ac0TOSG-_6rxwENs-peUxlwW57tNBUjp0TFSZ1HPvIthLPz2"/>
+</div>
+<div class="p-space-md flex flex-col gap-space-sm bg-surface-container-lowest">
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Civic edge analytics framework calculating urban road health indices from computer vision pavement feeds, vibration accelerometer logs, and municipal sensor arrays.
+          </p>
+<div class="flex flex-wrap gap-1 pt-1">
+<span class="font-label-mono text-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">PyTorch</span>
+<span class="font-label-mono text-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">OpenCV</span>
+<span class="font-label-mono text-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Fastify</span>
+<span class="font-label-mono text-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">PostgreSQL Edge</span>
+</div>
+<div class="pt-2 flex items-center justify-between border-t border-surface-container font-label-mono text-label-mono">
+<a class="text-on-surface hover:text-secondary font-medium transition-colors inline-flex items-center gap-1" href="#">
+<span>View Case Study</span>
+<span>↗</span>
+</a>
+<span class="text-outline">ACCURACY: 94.6%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Auxiliary Engineering Builds (Row-Based Editorial Cards) -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-mono text-label-mono uppercase tracking-widest text-outline">AUXILIARY SYSTEMS</span>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md mt-1">
+<div class="p-space-md bg-surface-container-lowest rounded-lg flex flex-col justify-between gap-space-sm">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Synapse Vector Bridge</span>
+<span class="font-label-mono text-label-mono text-secondary font-medium">OPEN SOURCE</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Lightweight streaming adapter connecting Redis Pub/Sub directly to pgvector pipelines with zero-allocation memory pooling.
+            </p>
+</div>
+<div class="flex items-center justify-between font-label-mono text-label-mono text-outline pt-2 border-t border-surface-container">
+<span>GO • DOCKER • PGVECTOR</span>
+<a class="text-on-surface hover:text-secondary font-medium" href="https://github.com" rel="noreferrer" target="_blank">GITHUB ↗</a>
+</div>
+</div>
+<div class="p-space-md bg-surface-container-lowest rounded-lg flex flex-col justify-between gap-space-sm">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Kite Design System Engine</span>
+<span class="font-label-mono text-label-mono text-on-surface-variant">INTERNAL TOOL</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Zero-runtime tokens compiler generating accessible contrast matrices, fluid typography ramps, and Tailwind v4 configurations.
+            </p>
+</div>
+<div class="flex items-center justify-between font-label-mono text-label-mono text-outline pt-2 border-t border-surface-container">
+<span>TYPESCRIPT • AST • TAILWIND</span>
+<a class="text-on-surface hover:text-secondary font-medium" href="https://github.com" rel="noreferrer" target="_blank">SPEC ↗</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: SKILLS & TECHNOLOGY TAXONOMY -->
+<section class="py-space-xl border-t border-surface-container-high" id="skills">
+<div class="flex flex-col gap-space-sm mb-space-lg">
+<span class="font-label-mono text-label-mono uppercase tracking-widest text-on-surface-variant font-medium">03 / TECHNICAL TAXONOMY</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">Technologies & Systems Stack</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+        Every tool in this stack is chosen for maximum execution velocity, deterministic production reliability, and surgical precision.
+      </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Category 1: Languages -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg flex flex-col gap-space-sm">
+<div class="font-label-mono text-label-mono uppercase tracking-wider text-on-surface font-semibold pb-1 border-b border-surface-container">
+          Core Languages
+        </div>
+<ul class="space-y-2 font-body-sm text-body-sm">
+<li class="flex items-center justify-between">
+<span class="text-on-surface font-medium">Python</span>
+<span class="font-label-mono text-label-mono text-outline">Production / ML</span>
+</li>
+<li class="flex items-center justify-between">
+<span class="text-on-surface font-medium">TypeScript</span>
+<span class="font-label-mono text-label-mono text-outline">Strict Type-Safe</span>
+</li>
+<li class="flex items-center justify-between">
+<span class="text-on-surface font-medium">JavaScript (ESNext)</span>
+<span class="font-label-mono text-label-mono text-outline">V8 Runtimes</span>
+</li>
+<li class="flex items-center justify-between">
+<span class="text-on-surface font-medium">SQL & PL/pgSQL</span>
+<span class="font-label-mono text-label-mono text-outline">Query Tuning</span>
+</li>
+<li class="flex items-center justify-between">
+<span class="text-on-surface font-medium">HTML5 & Modern CSS</span>
+<span class="font-label-mono text-label-mono text-outline">Standard APIs</span>
+</li>
+</ul>
+</div>
+<!-- Category 2: AI & ML -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg flex flex-col gap-space-sm">
+<div class="font-label-mono text-label-mono uppercase tracking-wider text-on-surface font-semibold pb-1 border-b border-surface-container">
+          AI & Machine Learning
+        </div>
+<ul class="space-y-2 font-body-sm text-body-sm">
+<li class="flex items-center justify-between">
+<span class="text-on-surface font-medium">PyTorch & HuggingFace</span>
+<span class="font-label-mono text-label-mono text-outline">Model Ingestion</span>
+</li>
+<li class="flex items-center justify-between">
+<span class="text-on-surface font-medium">Agentic Workflows</span>
+<span class="font-label-mono text-label-mono text-outline">Tool Coordination</span>
+</li>
+<li class="flex items-center justify-between">
+<span class="text-on-surface font-medium">RAG Pipelines</span>
+<span class="font-label-mono text-label-mono text-outline">Vector Retrieval</span>
+</li>
+<li class="flex items-center justify-between">
+<span class="text-on-surface font-medium">Embeddings & HNSW</span>
+<span class="font-label-mono text-label-mono text-outline">Similarity Index</span>
+</li>
+<li class="flex items-center justify-between">
+<span class="text-on-surface font-medium">Structured Outputs</span>
+<span class="font-label-mono text-label-mono text-outline">Pydantic / Zod</span>
+</li>
+</ul>
+</div>
+<!-- Category 3: Frontend & Interfaces -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg flex flex-col gap-space-sm">
+<div class="font-label-mono text-label-mono uppercase tracking-wider text-on-surface font-semibold pb-1 border-b border-surface-container">
+          Frontend & Interfaces
+        </div>
+<ul class="space-y-2 font-body-sm text-body-sm">
+<li class="flex items-center justify-between">
+<span class="text-on-surface font-medium">Next.js App Router</span>
+<span class="font-label-mono text-label-mono text-outline">Server Components</span>
+</li>
+<li class="flex items-center justify-between">
+<span class="text-on-surface font-medium">React 19</span>
+<span class="font-label-mono text-label-mono text-outline">Concurrent Rendering</span>
+</li>
+<li class="flex items-center justify-between">
+<span class="text-on-surface font-medium">Tailwind CSS</span>
+<span class="font-label-mono text-label-mono text-outline">Zero Runtime</span>
+</li>
+<li class="flex items-center justify-between">
+<span class="text-on-surface font-medium">Canvas & WebGL</span>
+<span class="font-label-mono text-label-mono text-outline">60fps Radar/Charts</span>
+</li>
+<li class="flex items-center justify-between">
+<span class="text-on-surface font-medium">Figma & Token Systems</span>
+<span class="font-label-mono text-label-mono text-outline">High-Craft Systems</span>
+</li>
+</ul>
+</div>
+<!-- Category 4: Systems & Cloud -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg flex flex-col gap-space-sm">
+<div class="font-label-mono text-label-mono uppercase tracking-wider text-on-surface font-semibold pb-1 border-b border-surface-container">
+          Systems & Infra
+        </div>
+<ul class="space-y-2 font-body-sm text-body-sm">
+<li class="flex items-center justify-between">
+<span class="text-on-surface font-medium">Node.js & Fastify</span>
+<span class="font-label-mono text-label-mono text-outline">High-QPS APIs</span>
+</li>
+<li class="flex items-center justify-between">
+<span class="text-on-surface font-medium">PostgreSQL & Redis</span>
+<span class="font-label-mono text-label-mono text-outline">Persistent Storage</span>
+</li>
+<li class="flex items-center justify-between">
+<span class="text-on-surface font-medium">Docker Containers</span>
+<span class="font-label-mono text-label-mono text-outline">Reproducibility</span>
+</li>
+<li class="flex items-center justify-between">
+<span class="text-on-surface font-medium">Vercel & Edge Runtimes</span>
+<span class="font-label-mono text-label-mono text-outline">Sub-10ms Routing</span>
+</li>
+<li class="flex items-center justify-between">
+<span class="text-on-surface font-medium">Git & CI/CD Pipelines</span>
+<span class="font-label-mono text-label-mono text-outline">Deterministic Deploys</span>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- SECTION 5: EXPERIENCE & MILESTONES -->
+<section class="py-space-xl border-t border-surface-container-high" id="experience">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<div class="lg:col-span-4 flex flex-col gap-space-xs">
+<span class="font-label-mono text-label-mono uppercase tracking-widest text-on-surface-variant font-medium">04 / TRACK RECORD</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">Experience & Milestones</h2>
+<p class="font-body-md text-body-md text-on-surface-variant pt-2">
+          A progression of architectural depth, moving from web foundations to autonomous intelligence and distributed telemetry systems.
+        </p>
+</div>
+<div class="lg:col-span-8 flex flex-col gap-space-lg">
+<!-- Milestone 1 -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl flex flex-col gap-space-sm border-l-2 border-primary">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+<div class="font-headline-md text-body-lg font-semibold text-on-surface">Building Autonomous Systems & Startup Products</div>
+<span class="font-label-mono text-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface font-medium">2026 — PRESENT</span>
+</div>
+<div class="font-label-mono text-label-mono text-secondary font-medium">ORBION LABS • LEAD ARCHITECT & INDEPENDENT RESEARCHER</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Architecting next-generation autonomous agent orchestration workbenches. Developing deterministic multi-agent state machines, streaming WebSocket telemetry protocols, and real-time visualization graphs for complex AI reasoning chains.
+          </p>
+<div class="flex flex-wrap items-center gap-space-md pt-1 font-label-mono text-label-mono text-outline">
+<span>• Sub-15ms loop latency</span>
+<span>• Zero-drift state synchronization</span>
+<span>• Multi-LLM provider compatibility</span>
+</div>
+</div>
+<!-- Milestone 2 -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl flex flex-col gap-space-sm border-l-2 border-outline-variant">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+<div class="font-headline-md text-body-lg font-semibold text-on-surface">Applied Machine Learning & Real-Time Systems Development</div>
+<span class="font-label-mono text-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface font-medium">2025 — 2026</span>
+</div>
+<div class="font-label-mono text-label-mono text-on-surface-variant font-medium">SYSTEMS RESEARCH & CLIENT COLLABORATION</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Engineered aerospace flight telemetry monitors and municipal civic sensor networks (Aircraft Platform, Road Sense). Built high-throughput ingestion pipelines using TimescaleDB, WebGL radar components, and edge computer vision inference models.
+          </p>
+<div class="flex flex-wrap items-center gap-space-md pt-1 font-label-mono text-label-mono text-outline">
+<span>• 10,000+ telemetry events/sec</span>
+<span>• 94.6% edge vision accuracy</span>
+<span>• 60fps radar canvas</span>
+</div>
+</div>
+<!-- Milestone 3 -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl flex flex-col gap-space-sm border-l-2 border-outline-variant">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+<div class="font-headline-md text-body-lg font-semibold text-on-surface">Software Engineering Foundations & System Architecture</div>
+<span class="font-label-mono text-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface font-medium">2024 — 2025</span>
+</div>
+<div class="font-label-mono text-label-mono text-on-surface-variant font-medium">CORE FULL-STACK DEVELOPMENT</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Built solid foundations in type-safe distributed web systems, relational database query optimization, modern component lifecycle patterns, and foundational deep learning implementations in PyTorch.
+          </p>
+<div class="flex flex-wrap items-center gap-space-md pt-1 font-label-mono text-label-mono text-outline">
+<span>• Full-stack TypeScript</span>
+<span>• Distributed database architectures</span>
+<span>• Production Git workflows</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 6: CURRENTLY BUILDING -->
+<section class="py-space-xl border-t border-surface-container-high flex flex-col gap-space-lg" id="currently-building">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-space-sm">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-mono text-label-mono uppercase tracking-widest text-on-surface-variant font-medium">05 / ACTIVE LABS</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">Currently Building</h2>
+</div>
+<div class="flex items-center gap-2 font-label-mono text-label-mono text-secondary">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span>LAB EXPERIMENTS IN PROGRESS</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-space-md lg:p-space-lg rounded-xl flex flex-col justify-between gap-space-md shadow-sm">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-mono text-label-mono text-outline">EXPERIMENT 01</span>
+<span class="font-label-mono text-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface">R&D</span>
+</div>
+<div class="font-headline-md text-headline-md font-semibold text-on-surface">Multi-Agent Consensus Protocols</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Exploring deterministic consensus protocols across LLM agents with asymmetrical knowledge bases. Ensuring agent swarms converge on unified output schemas without hallucinations.
+          </p>
+</div>
+<div class="flex items-center justify-between pt-space-sm border-t border-surface-container font-label-mono text-label-mono text-outline">
+<span>PROGRESS: 74%</span>
+<span class="text-on-surface font-medium">Active Codebase</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-space-md lg:p-space-lg rounded-xl flex flex-col justify-between gap-space-md shadow-sm">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-mono text-label-mono text-outline">EXPERIMENT 02</span>
+<span class="font-label-mono text-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface">INTERFACE</span>
+</div>
+<div class="font-headline-md text-headline-md font-semibold text-on-surface">Sub-Zero Latency Human Interfaces</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Bridging model inference latency with optimistic local execution, speculative streaming tokens, and immediate haptic feedback loops that make AI software feel instantaneous.
+          </p>
+</div>
+<div class="flex items-center justify-between pt-space-sm border-t border-surface-container font-label-mono text-label-mono text-outline">
+<span>PROGRESS: 88%</span>
+<span class="text-on-surface font-medium">Design Token RFC</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest p-space-md lg:p-space-lg rounded-xl flex flex-col justify-between gap-space-md shadow-sm">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-mono text-label-mono text-outline">EXPERIMENT 03</span>
+<span class="font-label-mono text-label-mono px-2 py-0.5 rounded bg-surface-container text-on-surface">CORE</span>
+</div>
+<div class="font-headline-md text-headline-md font-semibold text-on-surface">Orbion Distributed Core Engine</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Extracting the distributed scheduler of Orbion into a standalone, embeddable Rust/Python runtime for production serverless deployment.
+          </p>
+</div>
+<div class="flex items-center justify-between pt-space-sm border-t border-surface-container font-label-mono text-label-mono text-outline">
+<span>PROGRESS: 60%</span>
+<span class="text-on-surface font-medium">Alpha Testing</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 7: DEVELOPER TELEMETRY & GITHUB ACTIVITY -->
+<section class="py-space-xl border-t border-surface-container-high flex flex-col gap-space-lg" id="activity">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-space-sm">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-mono text-label-mono uppercase tracking-widest text-on-surface-variant font-medium">06 / TELEMETRY & VELOCITY</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">Code Velocity & Activity Log</h2>
+</div>
+<div class="font-label-mono text-label-mono text-on-surface-variant">
+        HANDLE: <a class="text-on-surface font-medium hover:underline" href="https://github.com" rel="noreferrer" target="_blank">@exobhavin</a>
+</div>
+</div>
+<!-- Minimalist Technical Heatmap & Metrics Container -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md lg:p-space-lg shadow-sm flex flex-col gap-space-md">
+<!-- Top Metrics Strip -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm pb-space-sm border-b border-surface-container font-label-mono">
+<div class="flex flex-col">
+<span class="text-outline text-label-mono uppercase">Total Commits (25-26)</span>
+<span class="text-headline-md font-semibold text-on-surface">1,248</span>
+</div>
+<div class="flex flex-col">
+<span class="text-outline text-label-mono uppercase">Pipeline Uptime</span>
+<span class="text-headline-md font-semibold text-secondary">99.98%</span>
+</div>
+<div class="flex flex-col">
+<span class="text-outline text-label-mono uppercase">Repositories</span>
+<span class="text-headline-md font-semibold text-on-surface">18 Active</span>
+</div>
+<div class="flex flex-col">
+<span class="text-outline text-label-mono uppercase">Avg Execution Latency</span>
+<span class="text-headline-md font-semibold text-on-surface">14.2ms</span>
+</div>
+</div>
+<!-- Monochrome Contribution Simulation Grid -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between font-label-mono text-label-mono text-outline">
+<span>CONTRIBUTION STREAM (PAST 52 WEEKS)</span>
+<span>1,248 CONTRIBUTIONS IN 2025–2026</span>
+</div>
+<div class="w-full overflow-x-auto py-1">
+<!-- 52 columns x 7 rows grid simulation -->
+<div class="grid grid-flow-col grid-rows-7 gap-1 min-w-[720px] h-28 items-center" id="heatmap-grid">
+<!-- Heatmap blocks generated via JS for surgical realism -->
+</div>
+</div>
+<div class="flex items-center justify-end gap-1.5 font-label-mono text-[10px] text-outline pt-1">
+<span>Less</span>
+<span class="w-2.5 h-2.5 rounded-[1px] bg-surface-container"></span>
+<span class="w-2.5 h-2.5 rounded-[1px] bg-surface-container-highest"></span>
+<span class="w-2.5 h-2.5 rounded-[1px] bg-outline-variant"></span>
+<span class="w-2.5 h-2.5 rounded-[1px] bg-primary"></span>
+<span class="w-2.5 h-2.5 rounded-[1px] bg-secondary"></span>
+<span>More</span>
+</div>
+</div>
+<!-- Real-time Commits Feed -->
+<div class="flex flex-col gap-2 pt-2 border-t border-surface-container">
+<span class="font-label-mono text-label-mono text-outline uppercase">RECENT COMMIT MANIFEST</span>
+<div class="space-y-1.5 font-label-mono text-label-mono">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 p-2 rounded bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-2">
+<span class="font-semibold text-on-surface">orbion-core:</span>
+<span class="text-on-surface-variant truncate">refactor(scheduler): vectorize state tree mutations for thread pool</span>
+</div>
+<div class="flex items-center gap-3 shrink-0 text-outline">
+<span class="text-secondary font-medium">main</span>
+<span>18m ago</span>
+<span class="text-on-surface">d98a2f1</span>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 p-2 rounded bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-2">
+<span class="font-semibold text-on-surface">aircraft-platform:</span>
+<span class="text-on-surface-variant truncate">feat(radar): add heading bearing extrapolation under high network jitter</span>
+</div>
+<div class="flex items-center gap-3 shrink-0 text-outline">
+<span class="text-secondary font-medium">v1.4</span>
+<span>3h ago</span>
+<span class="text-on-surface">4a1bc90</span>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 p-2 rounded bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-2">
+<span class="font-semibold text-on-surface">road-sense-edge:</span>
+<span class="text-on-surface-variant truncate">perf(model): quantize pavement degradation model to INT8</span>
+</div>
+<div class="flex items-center gap-3 shrink-0 text-outline">
+<span class="text-secondary font-medium">edge</span>
+<span>1d ago</span>
+<span class="text-on-surface">88e331c</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 8: CONTACT / FINAL CTA -->
+<section class="py-space-xl border-t border-surface-container-high mb-space-lg" id="contact">
+<div class="bg-primary text-on-primary rounded-xl p-space-md lg:p-space-xl flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-sm max-w-3xl">
+<div class="font-label-mono text-label-mono text-tertiary-fixed uppercase tracking-widest font-medium">
+          INITIATE CONTACT
+        </div>
+<h2 class="font-display-hero text-headline-lg lg:text-display-hero font-semibold tracking-tight text-on-primary leading-tight">
+          Let's build something enduring.
+        </h2>
+<p class="font-body-lg text-body-lg text-primary-fixed leading-relaxed">
+          Have an ambitious project, startup venture, or engineering opportunity? I'm always open to discussing visionary ideas, technical architecture, or consulting engagements.
+        </p>
+</div>
+<!-- Action Card Box -->
+<div class="bg-primary-container p-space-md rounded-lg flex flex-col md:flex-row md:items-center justify-between gap-space-md border border-on-primary-fixed-variant">
+<div class="flex flex-col gap-1">
+<span class="font-label-mono text-label-mono text-on-primary-container uppercase">PRIMARY TRANSMISSION CHANNEL</span>
+<div class="font-headline-md text-headline-md font-semibold text-on-primary">
+            exobhavinss@gmail.com
+          </div>
+<span class="font-body-sm text-body-sm text-on-primary-container">PGP Fingerprint verified • 100% reply rate on qualified inquiries</span>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="px-5 py-2.5 rounded bg-on-primary text-primary font-body-md text-body-md font-semibold hover:bg-surface-container-low transition-all duration-150 cursor-pointer flex items-center gap-2" id="cta-copy-btn" onclick="copyContactEmail('exobhavinss@gmail.com', this)">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+<span id="cta-copy-label">Copy Email</span>
+</button>
+<a class="px-5 py-2.5 rounded bg-surface-tint text-on-primary font-body-md text-body-md font-medium hover:bg-outline transition-colors flex items-center gap-1.5" href="mailto:exobhavinss@gmail.com">
+<span>Send Direct Email</span>
+<span>↗</span>
+</a>
+</div>
+</div>
+<!-- Footer Quick Index -->
+<div class="pt-space-md border-t border-on-primary-fixed-variant flex flex-wrap items-center justify-between gap-space-sm font-label-mono text-label-mono text-on-primary-container">
+<div class="flex items-center gap-4">
+<a class="text-on-primary hover:underline" href="https://github.com" rel="noreferrer" target="_blank">GitHub</a>
+<span>/</span>
+<a class="text-on-primary hover:underline" href="https://linkedin.com" rel="noreferrer" target="_blank">LinkedIn</a>
+<span>/</span>
+<a class="text-on-primary hover:underline" href="https://x.com" rel="noreferrer" target="_blank">X (Twitter)</a>
+</div>
+<div>AVAILABILITY: Q2/Q3 2026 ENGAGEMENTS</div>
+</div>
+</div>
+</section>
+</div>
+<script>
+  function copyContactEmail(email, btnEl) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(email).then(() => {
+        showCopyState(btnEl);
+      }).catch(() => {
+        fallbackCopy(email, btnEl);
+      });
+    } else {
+      fallbackCopy(email, btnEl);
+    }
+  }
+
+  function fallbackCopy(text, btnEl) {
+    const tempInput = document.createElement("input");
+    tempInput.value = text;
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    try {
+      document.execCommand("copy");
+      showCopyState(btnEl);
+    } catch (err) {
+      console.error("Copy failed", err);
+    }
+    document.body.removeChild(tempInput);
+  }
+
+  function showCopyState(btnEl) {
+    const label = btnEl.querySelector("span:last-child");
+    const originalText = label.innerText;
+    label.innerText = "COPIED TO CLIPBOARD ✓";
+    btnEl.classList.add("ring-1", "ring-secondary");
+    setTimeout(() => {
+      label.innerText = originalText;
+      btnEl.classList.remove("ring-1", "ring-secondary");
+    }, 2000);
+  }
+
+  // Populate dynamic GitHub contribution grid
+  (function initContributionHeatmap() {
+    const container = document.getElementById("heatmap-grid");
+    if (!container) return;
+
+    // Total 52 weeks * 7 days = 364 cells
+    const intensities = [
+      "bg-surface-container",
+      "bg-surface-container",
+      "bg-surface-container-highest",
+      "bg-outline-variant",
+      "bg-primary",
+      "bg-secondary"
+    ];
+
+    const fragment = document.createDocumentFragment();
+    for (let i = 0; i < 364; i++) {
+      const cell = document.createElement("div");
+      cell.className = "w-2.5 h-2.5 rounded-[1px] transition-colors duration-100 hover:scale-125";
+      
+      // Seed weighted distribution towards activity
+      const r = Math.random();
+      let colorClass = intensities[0];
+      if (r > 0.85) colorClass = intensities[5];
+      else if (r > 0.65) colorClass = intensities[4];
+      else if (r > 0.45) colorClass = intensities[3];
+      else if (r > 0.25) colorClass = intensities[2];
+      else if (r > 0.1) colorClass = intensities[1];
+
+      cell.classList.add(colorClass);
+      fragment.appendChild(cell);
+    }
+    container.appendChild(fragment);
+  })();
+
+  // Micro-ticker updates for system terminal log
+  (function initTicker() {
+    const ticker = document.getElementById("terminal-ticker");
+    if (!ticker) return;
+
+    const messages = [
+      "Orbion runtime loop running at 60Hz. Zero drift recorded across all active shards.",
+      "TimescaleDB ingestion: 10,480 telemetry events/sec buffered without drop.",
+      "Vector search pipeline: 128-dim cosine similarity indexed in 4.2ms.",
+      "Civic AI edge models validated: 94.6% confidence on pavement distress detection.",
+      "Supabase real-time channel sync verified: WebSocket latency <14ms."
+    ];
+
+    let idx = 0;
+    setInterval(() => {
+      idx = (idx + 1) % messages.length;
+      ticker.innerHTML = messages[idx];
+    }, 4500);
+  })();
+
+  // Global Command+K Listener for quick navigation
+  window.addEventListener("keydown", (e) => {
+    if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
+      e.preventDefault();
+      const contactSection = document.getElementById("contact");
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  });
+</script></div></main><footer class="w-full border-t border-surface-container-high bg-surface-container-lowest mt-space-xl"><div class="max-w-[1360px] mx-auto px-margin-mobile lg:px-margin py-space-xl"><div class="grid grid-cols-1 md:grid-cols-12 gap-space-lg mb-space-xl"><div class="md:col-span-6 flex flex-col justify-between space-y-space-md"><div class="space-y-space-xs"><div class="font-headline-md text-headline-md text-on-surface font-semibold tracking-tight">Bhavin Shankur</div><p class="font-body-md text-body-md text-on-surface-variant">AI/ML & Full-Stack Developer</p><p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">Engineering autonomous agents, high-throughput microservices, and surgical developer tooling with clinical precision.</p></div><div class="flex items-center gap-3 pt-space-xs"><span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container-low border border-surface-container font-label-mono text-label-mono text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Tokyo / SF / Remote (UTC+0)</span><span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container-low border border-surface-container font-label-mono text-label-mono text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>Systems Normal</span></div></div><div class="md:col-span-3 space-y-space-sm"><div class="font-label-mono text-label-mono uppercase tracking-wider text-on-surface font-medium">Index</div><ul class="space-y-2 font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-on-surface transition-colors" data-path="about" href="#">About & Philosophy</a></li><li><a class="hover:text-on-surface transition-colors" data-path="projects" href="#">Selected Architecture & Projects</a></li><li><a class="hover:text-on-surface transition-colors" data-path="skills" href="#">Technical Stack & Models</a></li><li><a class="hover:text-on-surface transition-colors" data-path="experience" href="#">Work & Leadership History</a></li><li><a class="hover:text-on-surface transition-colors" data-path="currently-building" href="#">Currently Building</a></li><li><a class="hover:text-on-surface transition-colors" data-path="activity" href="#">Research & Real-Time Activity</a></li></ul></div><div class="md:col-span-3 space-y-space-sm"><div class="font-label-mono text-label-mono uppercase tracking-wider text-on-surface font-medium">Connect</div><ul class="space-y-2 font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-on-surface transition-colors inline-flex items-center gap-1" href="https://github.com" rel="noreferrer" target="_blank">GitHub <span class="font-label-mono text-label-mono text-outline">↗</span></a></li><li><a class="hover:text-on-surface transition-colors inline-flex items-center gap-1" href="https://linkedin.com" rel="noreferrer" target="_blank">LinkedIn <span class="font-label-mono text-label-mono text-outline">↗</span></a></li><li><a class="hover:text-on-surface transition-colors inline-flex items-center gap-1" href="https://x.com" rel="noreferrer" target="_blank">X (Twitter) <span class="font-label-mono text-label-mono text-outline">↗</span></a></li><li><a class="hover:text-on-surface transition-colors inline-flex items-center gap-1" href="mailto:contact@bhavinshankur.dev">Email <span class="font-label-mono text-label-mono text-outline">↗</span></a></li></ul></div></div><div class="pt-space-lg border-t border-surface-container-high flex flex-col sm:flex-row items-center justify-between gap-space-sm text-on-surface-variant font-label-mono text-label-mono"><div>© 2026 Bhavin Shankur. Built with precision and care.</div><div class="text-outline">LATENCY: 14ms • REGION: GLOBAL EDGE</div></div></div></footer></body></html>
