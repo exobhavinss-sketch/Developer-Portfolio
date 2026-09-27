@@ -1,0 +1,16 @@
+{
+  "name": "Bhavin Shankur Portfolio",
+  "short_name": "Bhavin Shankur",
+  "description": "AI/ML Developer & Full-Stack Developer • Co-Founder & CEO of Orbion",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fbf9f9",
+  "theme_color": "#fbf9f9",
+  "icons": [
+    {
+      "src": "/monogram.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

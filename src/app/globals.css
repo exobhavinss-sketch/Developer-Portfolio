@@ -21,6 +21,7 @@
     -moz-osx-font-smoothing: grayscale;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
   }
 
   ::selection {
@@ -34,5 +35,21 @@
     border-width: 1px;
     border-style: solid;
     border-color: #e5e5e5;
+  }
+
+  .focus-ring {
+    @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2;
+  }
+}
+
+/* Accessibility: Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
