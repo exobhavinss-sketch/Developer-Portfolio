@@ -22,9 +22,11 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
     if (project.image) {
       return (
         <div className="w-full bg-surface-low overflow-hidden relative border-b border-border">
-          <img
+          <Image
             src={project.image}
             alt={`${project.title} preview`}
+            width={1200}
+            height={600}
             className="w-full h-auto object-cover max-h-[520px] transition-transform duration-500 ease-out group-hover:scale-[1.01]"
             loading="lazy"
           />

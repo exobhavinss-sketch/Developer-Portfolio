@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { ArrowUpRight, Cpu, Layers, Workflow, ShieldCheck, Terminal } from "lucide-react";
 import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
@@ -108,9 +109,11 @@ export const OrbionSection: React.FC = () => {
         </div>
 
         <div className="w-full bg-surface-low overflow-hidden">
-          <img
+          <Image
             src="/projects/orbion-preview.png"
             alt="Orbion AI Orchestration Workbench Preview"
+            width={1200}
+            height={600}
             className="w-full h-auto object-cover max-h-[580px]"
             loading="lazy"
           />
