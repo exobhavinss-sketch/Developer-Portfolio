@@ -5,8 +5,10 @@ export interface Project {
   description: string;
   category: string;
   technologies: string[];
-  githubUrl: string;
+  githubUrl?: string;
   liveDemoUrl?: string;
+  liveDemoLabel?: string;
+  liveDemoIcon?: "vercel" | "globe";
   image?: string;
   visualType?: "orbion" | "aircraft" | "ai-mesh" | "assembly-terminal" | "earth-globe";
   badge?: string;
@@ -22,7 +24,9 @@ export const projects: Project[] = [
       "An AI Operating System designed to help businesses automate and operate their everyday workflows through intelligent AI systems capable of understanding tasks, making decisions, using tools, and executing workflows.",
     category: "AI OPERATING SYSTEM / WORKBENCH",
     technologies: ["Python", "Next.js", "AI Agents", "WebSockets", "Vector DB"],
-    githubUrl: "https://github.com/exobhavinss-sketch",
+    liveDemoUrl: "https://orbion-in.vercel.app/",
+    liveDemoLabel: "Visit Orbion",
+    liveDemoIcon: "globe",
     image: "/projects/orbion-preview.png",
     badge: "FLAGSHIP",
     isFlagship: true,

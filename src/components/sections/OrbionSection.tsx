@@ -35,21 +35,34 @@ export const OrbionSection: React.FC = () => {
   return (
     <section id="orbion" className="py-20 border-t border-border flex flex-col gap-12">
       {/* Section Header */}
-      <div className="flex flex-col gap-3 max-w-3xl">
-        <div className="flex items-center gap-2">
-          <span className="font-mono text-xs uppercase tracking-widest text-on-surface-variant font-medium">
-            05 / FLAGSHIP VENTURE
-          </span>
-          <span className="font-mono text-[10px] px-2 py-0.5 rounded bg-secondary-fixed text-secondary-on-fixed font-semibold">
-            ACTIVE SYSTEM
-          </span>
+      <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+        <div className="flex flex-col gap-3 max-w-3xl">
+          <div className="flex items-center gap-2">
+            <span className="font-mono text-xs uppercase tracking-widest text-on-surface-variant font-medium">
+              05 / FLAGSHIP VENTURE
+            </span>
+            <span className="font-mono text-[10px] px-2 py-0.5 rounded bg-secondary-fixed text-secondary-on-fixed font-semibold">
+              ACTIVE SYSTEM
+            </span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-on-surface">
+            Building Orbion.
+          </h2>
+          <p className="text-lg sm:text-xl text-on-surface-variant leading-relaxed">
+            An AI Operating System designed to help businesses automate and operate their everyday workflows through intelligent AI systems.
+          </p>
         </div>
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-on-surface">
-          Building Orbion.
-        </h2>
-        <p className="text-lg sm:text-xl text-on-surface-variant leading-relaxed">
-          An AI Operating System designed to help businesses automate and operate their everyday workflows through intelligent AI systems.
-        </p>
+        <div className="flex items-center gap-3">
+          <a
+            href="https://orbion-in.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded bg-primary text-primary-foreground font-mono text-xs font-medium hover:bg-[#222222] transition-colors"
+          >
+            <span>Visit Orbion</span>
+            <ArrowUpRight className="w-3.5 h-3.5" />
+          </a>
+        </div>
       </div>
 
       {/* Founder Statement & Technical Thesis Box */}
@@ -103,9 +116,20 @@ export const OrbionSection: React.FC = () => {
               ORBION WORKBENCH INTERFACE PREVIEW
             </span>
           </div>
-          <span className="text-on-surface-muted hidden sm:inline">
-            AUTONOMOUS AGENT FLOW & TELEMETRY
-          </span>
+          <div className="flex items-center gap-3">
+            <span className="text-on-surface-muted hidden sm:inline">
+              AUTONOMOUS AGENT FLOW & TELEMETRY
+            </span>
+            <a
+              href="https://orbion-in.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 hover:text-on-surface transition-colors"
+            >
+              <span>orbion-in.vercel.app</span>
+              <ArrowUpRight className="w-3 h-3 text-on-surface-muted" />
+            </a>
+          </div>
         </div>
 
         <div className="w-full bg-surface-low overflow-hidden">

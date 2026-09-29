@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Globe } from "lucide-react";
 import { Project } from "@/data/projects";
 import { SocialIcon } from "@/components/ui/SocialIcon";
 import { AIGuidanceVisual } from "@/components/visuals/AIGuidanceVisual";
@@ -91,25 +91,31 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-primary text-primary-foreground font-medium hover:bg-[#222222] transition-colors"
-                aria-label={`Open live demo for ${project.title}`}
+                aria-label={`Open ${project.liveDemoLabel || "live demo"} for ${project.title}`}
               >
-                <SocialIcon type="vercel" size={12} className="shrink-0" />
-                <span>Live Demo</span>
+                {project.liveDemoIcon === "globe" ? (
+                  <Globe className="w-3.5 h-3.5 shrink-0" />
+                ) : (
+                  <SocialIcon type={project.liveDemoIcon || "vercel"} size={12} className="shrink-0" />
+                )}
+                <span>{project.liveDemoLabel || "Live Demo"}</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
               </a>
             )}
 
-            <a
-              href={project.githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-surface-low text-on-surface hover:bg-surface-container transition-colors hairline-border"
-              aria-label={`View ${project.title} on GitHub`}
-            >
-              <SocialIcon type="github" size={13} className="shrink-0" />
-              <span>Source</span>
-              <ArrowUpRight className="w-3.5 h-3.5 text-on-surface-muted" />
-            </a>
+            {project.githubUrl && (
+              <a
+                href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-surface-low text-on-surface hover:bg-surface-container transition-colors hairline-border"
+                aria-label={`View ${project.title} on GitHub`}
+              >
+                <SocialIcon type="github" size={13} className="shrink-0" />
+                <span>Source</span>
+                <ArrowUpRight className="w-3.5 h-3.5 text-on-surface-muted" />
+              </a>
+            )}
           </div>
         </div>
 
